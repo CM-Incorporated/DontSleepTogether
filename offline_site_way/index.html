@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -75,6 +75,20 @@
           releaseWakeLock();
         } else {
           requestWakeLock();
+        }
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.code === "Space") {
+          e.preventDefault();
+          btn.click();
+        }
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.code === "Enter") {
+          e.preventDefault();
+          btn.click();
         }
       });
 
