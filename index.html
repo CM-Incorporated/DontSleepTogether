@@ -78,6 +78,13 @@
         }
       });
 
+      document.addEventListener("keydown", (e) => {
+        if (e.code === "Space") {
+          e.preventDefault();
+          btn.click();
+        }
+      });
+
       document.addEventListener("visibilitychange", () => {
         if (wakeLock !== null && document.visibilityState === "visible") {
           requestWakeLock();
